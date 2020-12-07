@@ -21,7 +21,7 @@ import pretrainedmodels
 import timm
 
 parser=argparse.ArgumentParser()
-parser.add_argument('--num_epochs',type=int,default=30,help='number of epochs for training')
+parser.add_argument('--num_epochs',type=int,default=10,help='number of epochs for training')
 parser.add_argument('--batch_size',type=int,default=16,help='size of batch for training')
 parser.add_argument('--num_cpus',type=int,default=8,help='number of cpu workers')
 parser.add_argument('--img_size',type=int,default=96,help='image size')
@@ -32,7 +32,7 @@ input_args=parser.parse_args()
 hyp_param={'debug':False,
            'location':'nb', #'Flyai', 'Colab', 'NB'
            'train':True,
-           'pretrained':False,
+           'pretrained':True,
            'cache_img':False,
            'lr':1e-3,
            'weight_decay':1e-6,
